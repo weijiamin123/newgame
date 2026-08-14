@@ -2,10 +2,52 @@
 <html lang="zh-CN">
 <head>
   <meta charset="utf-8">
-  <title>勇者集结</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>勇者集结 · 四款小游戏</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>勇者集结</h1>
-  <p>前端建设中</p>
+  <main class="app">
+    <section id="view-hub" class="view active" data-view="hub">
+      <header class="hub-hero">
+        <p class="eyebrow">WOLIN ARCADE</p>
+        <h1>勇者集结</h1>
+        <p class="hub-sub">四款小游戏，一次玩个够</p>
+      </header>
+      <div class="hub-grid">
+        <button class="game-card history" data-game="history">
+          <span class="card-index">01</span>
+          <strong>野史冲浪</strong>
+          <span class="card-tag">历史答题</span>
+        </button>
+        <button class="game-card grab21" data-game="grab21">
+          <span class="card-index">02</span>
+          <strong>必输21点</strong>
+          <span class="card-tag">先到21者胜</span>
+        </button>
+        <button class="game-card codebreaker" data-game="codebreaker">
+          <span class="card-index">03</span>
+          <strong>绝密2025</strong>
+          <span class="card-tag">8次破译密码</span>
+        </button>
+        <button class="game-card dungeon" data-game="dungeon">
+          <span class="card-index">04</span>
+          <strong>地下城勇士</strong>
+          <span class="card-tag">骰子判定冒险</span>
+        </button>
+      </div>
+    </section>
+
+    <section id="view-game" class="view" data-view="game">
+      <header class="game-header">
+        <button id="back-btn" class="icon-btn" aria-label="返回大厅">←</button>
+        <h2 id="game-title"></h2>
+        <span id="game-badge" class="game-badge"></span>
+      </header>
+      <div id="game-content"></div>
+    </section>
+  </main>
+  <div id="toast" class="toast" hidden></div>
+  <script src="app.js"></script>
 </body>
 </html>
