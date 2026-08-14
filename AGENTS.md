@@ -16,6 +16,12 @@ This repository is a FastAPI web game hub with four browser games: history quiz,
 - `python -m uvicorn app:app --reload --port 5000` — start the web app.
 - `python -m pytest` — run all tests.
 
+## Docker
+
+- `docker build -t newgame .` — build the container image.
+- `docker run -d -p 5000:8000 --name newgame newgame` — run the app at `http://localhost:5000`.
+- `docker stop newgame && docker rm newgame` — stop and remove the container.
+
 ## Coding Style & Naming Conventions
 
 Follow PEP 8 for Python: 4-space indentation, snake_case functions and variables, PascalCase classes. JavaScript uses 2-space indentation and `const` by default. Save source as UTF-8. User-facing strings are Chinese and should keep the existing tone. Use comments only where intent is not obvious. No formatter is configured; adopt `black` and `ruff` for Python if the project grows.
