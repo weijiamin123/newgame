@@ -1,10 +1,9 @@
 # Repository Guidelines
 
-This repository is a Python console game collection with a FastAPI web frontend. `new_game.py` remains the CLI entry point, while `app.py` serves the same four games in the browser: history quiz, "21" game, code-breaking, and dungeon adventure.
+This repository is a FastAPI web game hub with four browser games: history quiz, "21" game, code-breaking, and dungeon adventure.
 
 ## Project Structure & Module Organization
 
-- `new_game.py`: CLI version of all four games; keep it runnable.
 - `app.py`: FastAPI app that exposes the JSON API and hosts the frontend.
 - `game_engines/`: pure Python state machines used by the API; no `input()` or `print()`.
 - `static/`: `index.html`, `style.css`, `app.js` single-page frontend.
@@ -15,7 +14,6 @@ This repository is a Python console game collection with a FastAPI web frontend.
 
 - `pip install -r requirements.txt` — install dependencies.
 - `python -m uvicorn app:app --reload --port 5000` — start the web app.
-- `python new_game.py` — run the CLI version.
 - `python -m pytest` — run all tests.
 
 ## Coding Style & Naming Conventions
